@@ -35,7 +35,7 @@ Users and groups relatable commands
 > [!NOTE]
 > Ensures that the group is not the default group of any existing user when you are delete it!
 
-<br><br>
+<br>
 
 ### **Group memberships info🍸**
 
@@ -52,9 +52,9 @@ Here we explained some of the system groups that users can be joined.
 - **CD/DVD user(cdrom):** Lets you use CDs, DVDs, or Blu-ray drives. _Without this, your computer won't see inserted discs_
 
 - **The boss(sudo):** Lets you run commands as administrator (root), When you type `sudo apt update`, this group allows it.
-
-  > [!WARNING]
-  > Be careful - members of this group can do anything, even break the system!
+  
+> [!WARNING]
+> Be careful - members of this group can do anything, even break the system!
 
 - **Old school internet user(dip):** Lets you use dial-up modems(older modems). _it's a leftover from the past_
 
@@ -69,7 +69,7 @@ Here we explained some of the system groups that users can be joined.
 > [!tip]
 > You can use command `cat /etc/group` to see all groups on system that a user can join.
 
-<br><br>
+<br>
 
 ### **User permissions🧑🏻‍💻👩🏻‍💻**
 
