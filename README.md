@@ -9,6 +9,10 @@ here is the list of labs:
 
 ## **Users management and file accessibility👥(First lab)**
 
+### Description
+
+---
+
 In this lab we are going to manage users in three group (normal users, admins, developers) and each file should assign to a group and owner, and also should limited users to only what they need to access.
 <br><br>
 
@@ -20,17 +24,16 @@ Users and groups relatable commands
 
 | Command                             | Description                                                          |
 | ----------------------------------- | -------------------------------------------------------------------- |
-| `getent passwd` & `cat /etc/passwd` | Display all the users with details                                   |
-| `getent group sudo`                 | Display just the root users                                          |
-| `compgen -u`                        | Display all users (no details)                                       |
-| `useradd [username]`                | Adds user and use _sudo_                                             |
-| `userdel [username]`                | Deletes user and use _sudo_                                          |
-| `compgen -g`                        | Dispaly all groups (no details)                                      |
-| `groupadd [groupname]`              | Adds group and use _sudo_                                            |
-| `groupdel [groupname]`              | Deletes group and use _sudo_                                         |
+| `getent passwd` & `cat /etc/passwd` | Displays all the users with details                                  |
+| `getent group sudo`                 | Displays just the root users                                         |
+| `compgen -u`                        | Displays all users (no details)                                      |
+| `sudo useradd [username]`           | Creates user                                                         |
+| `sudo passwd [username]`            | Assign a password to user                                            |
+| `sudo userdel [username]`           | Deletes user                                                         |
+| `compgen -g`                        | Dispalys all groups (no details)                                     |
+| `sudo groupadd [groupname]`         | Creates group                                                        |
+| `sudo groupdel [groupname]`         | Deletes group                                                        |
 | `id [username(optional)]`           | This command display summary of a user's identity as UID, GID etc... |
-
-<br>
 
 > [!NOTE]
 > Ensures that the group is not the default group of any existing user when you are delete it!
@@ -52,7 +55,7 @@ Here we explained some of the system groups that users can be joined.
 - **CD/DVD user(cdrom):** Lets you use CDs, DVDs, or Blu-ray drives. _Without this, your computer won't see inserted discs_
 
 - **The boss(sudo):** Lets you run commands as administrator (root), When you type `sudo apt update`, this group allows it.
-  
+
 > [!WARNING]
 > Be careful - members of this group can do anything, even break the system!
 
@@ -64,8 +67,6 @@ Here we explained some of the system groups that users can be joined.
 
 - **Printer manager(lpadmin):** Lets you add, remove, and configure printers, Without this, you couldn't set up or manage printers
 
-  <br>
-
 > [!tip]
 > You can use command `cat /etc/group` to see all groups on system that a user can join.
 
@@ -75,6 +76,12 @@ Here we explained some of the system groups that users can be joined.
 
 ---
 
-| Command | Description                                                                                                                                          |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ls -l` | List the files and directories with file permissions for your current location. The first character denotes whether an item is a file or a directory |
+| Command                                      | Description                                                                                                                                          |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ls -l`                                      | List the files and directories with file permissions for your current location. The first character denotes whether an item is a file or a directory |
+| `sudo usermod -a -G [group name] [username]` | Adds user to a group                                                                                                                                 |
+| `sudo deluser [username] [groupname]`        | Deletes user from a group                                                                                                                            |
+| `sudo -l -U [username]`                      | Displays what sudo commands user can run                                                                                                             |
+
+> [!TIP]
+> With this command `sudo useradd -d /home/customdir [username]` you can specify a custom home directory for the user.
