@@ -7,6 +7,42 @@ here is the list of labs:
 
 [**Users management and file accessibility👥(First lab)**](#users-management-and-file-accessibilityfirst-lab) <br>
 
+## **🫵🏻Basic commands**
+
+For start we need to know some basic commands to work with linux terminal freely so In this section we are going to learn about some basic commands that will be handy in labs.
+
+| Command                                          | Description                                                                                             |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `pwd`                                            | Displays path of the directory that you are currently in                                                |
+| `cd [directory]`                                 | For navigate from one directory to another                                                              |
+| `ls [options] [directory]`                       | Without any options or directory, `ls` will list all non-hidden files in the current directory.         |
+| `mv [file or directory name] [target directory]` | Used for moving files or directories from one location to another                                       |
+| `mv [old file name] [new file name]`             | Also we can use `mv` to rename a file or directory                                                      |
+| `cp [source file] [target directory or file]`    | used for copying files from one location to other                                                       |
+| `touch [file name]`                              | Creates empty files                                                                                     |
+| `cat > [file name]`                              | Creates file and after executing the command, you can type your content                                 |
+| `mkdir [directory name]`                         | Creates a directory                                                                                     |
+| `rm [file name]`                                 | primary removes files                                                                                   |
+| `rmdir [option] [directory name]`                | deletes empty directories and if you want to directories that contains files in option section add `-r` |
+
+### **Directory Hierarchy (file system tree🌲)**
+
+---
+
+Understanding the directory hierarchy is crucial for efficient navigation and file management.
+
+- **/:** Root directory, the top level of the file system.
+- **/home:** Home directory contains personal directories for the users.
+- **/bin:** This directly contains the executable files of many basic shell commands like ls, cp, cd etc
+- **/sbin:** This is similar to the /bin directory. The only difference is that is contains the binaries that can only be run by root or a sudo user
+- **/etc:** This directory contains the core configuration files of the system
+- **/var:** Var, short for variable, is where programs store runtime information like system logging, user tracking, caches, and other files that system programs create and manage
+- **/usr:** In this directory go all the executable files, libraries, source of most of the system programs
+- **/lib:** Shared libraries. Libraries are basically codes that can be used by the executable binaries
+- **/tmp:** This directory holds temporary files
+- **/opt:** This directory is used for installing/storing the files of third-party applications that are not available from the distribution’s repository
+- **/mnt:** This directory used by system administrators to manually mount a filesystem
+
 ## **Users management and file accessibility👥(First lab)**
 
 ### Description
@@ -85,11 +121,3 @@ Here we explained some of the system groups that users can be joined.
 
 > [!TIP]
 > With this command `sudo useradd -d /home/customdir [username]` you can specify a custom home directory for the user.
-
-### **File ownership**
-
-Every file and directory in Linux has three kinds of owners:
-
-1. **User:** _User_ is the owner of the file. When you create a file, you become the owner of the file
-2. **Group:** Every user is part of a certain group(s). A _group_ consists of several users and this is one way to manage users in a multi-user environment.
-3. **Other:** _Other_ can be considered as a big group with all the users on the system. Basically, anyone with access to the system belongs to this group.
