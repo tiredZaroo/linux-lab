@@ -7,7 +7,7 @@ here is the list of labs:
 
 [**Users management and file accessibility👥(First lab)**](#users-management-and-file-accessibilityfirst-lab) <br>
 
-## **🫵🏻Basic commands**
+## **🫵🏻Basic**
 
 For start we need to know some basic commands to work with linux terminal freely so In this section we are going to learn about some basic commands that will be handy in labs.
 
@@ -42,6 +42,22 @@ Understanding the directory hierarchy is crucial for efficient navigation and fi
 - **/tmp:** This directory holds temporary files
 - **/opt:** This directory is used for installing/storing the files of third-party applications that are not available from the distribution’s repository
 - **/mnt:** This directory used by system administrators to manually mount a filesystem
+
+### **File editing📝**
+
+---
+
+Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
+
+- **Nano**  
+  To use the _nano_ command in Linux, you simply type _nano_ followed by the filename (`nano [options] [file name]`). This command opens the specified file in the nano text editor. If the file doesn’t exist, nano will create it for you.  
+  Once you’ve opened a file, you can start editing right away and to save your changes, you press _Ctrl+O_, then Enter. This will write your changes to disk and for exit nano, you press _Ctrl+X_. For more shortcuts and information you can check [Essential Nano keyboard shortcuts](https://itsfoss.com/nano-editor-guide/).
+
+  > [!tip]
+  > To create backup of the current file before saving changes, you can use `nano -B [file name]` command.
+
+- **Vim**  
+  _Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will be painful at first. It will take time and i recommend to escape👍🏻.
 
 ## **Users management and file accessibility👥(First lab)**
 
