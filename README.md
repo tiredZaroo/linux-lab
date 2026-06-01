@@ -11,6 +11,9 @@ here is the list of labs:
 
 For start we need to know some basic commands to work with linux terminal freely so In this section we are going to learn about some basic commands that will be handy in labs.
 
+> [!TIP]
+> To see what version of linux your using you can use `cat /etc/os-release` command.
+
 | Command                                          | Description                                                                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
 | `pwd`                                            | Displays path of the directory that you are currently in                                                |
@@ -53,11 +56,20 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
   To use the _nano_ command in Linux, you simply type _nano_ followed by the filename (`nano [options] [file name]`). This command opens the specified file in the nano text editor. If the file doesn’t exist, nano will create it for you.  
   Once you’ve opened a file, you can start editing right away and to save your changes, you press _Ctrl+O_, then Enter. This will write your changes to disk and for exit nano, you press _Ctrl+X_. For more shortcuts and information you can check [Essential Nano keyboard shortcuts](https://itsfoss.com/nano-editor-guide/).
 
-  > [!tip]
-  > To create backup of the current file before saving changes, you can use `nano -B [file name]` command.
+> [!tip]
+> To create backup of the current file before saving changes, you can use `nano -B [file name]` command.
 
 - **Vim**  
-  _Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will be painful at first. It will take time and i recommend to escape👍🏻.
+  _Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will be painful at first. It will take time and i recommend to escape👍🏻and here is [Vim Cheat Sheet](https://vim.rtorr.com/).  
+  To see if it is installed you can use `command -v vim` command.  
+  To install vim you can use `sudo apt install vim-nox` command.  
+  When you start first are in _Normal mode_, you can not _edit_ file in this mode, you can't type anything.  
+  For typing and editing you need to enter _Insert mode_. If you press `i` or press _shift+a_ you can enter _Insert mode_. If you want to exit Normal mode you press Esc. and for leaving vim you type `:q` and if you want exit without saving changes you can type `:q!`.  
+  `:` give us _command mode_ and if you press Esc you come back to _Normal mode_.  
+  For saving file you can use `:w` and for saving and quit you can use `:wq`.
+
+> [!TIP]
+> For undoing first you need to go on _Normal mode_ and then press `u`
 
 ## **Users management and file accessibility👥(First lab)**
 
