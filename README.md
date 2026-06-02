@@ -69,7 +69,8 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
   For saving file you can use `:w` and for saving and quit you can use `:wq`.
 
 > [!TIP]
-> For undoing first you need to go on _Normal mode_ and then press `u`
+> For undoing first you need to go on _Normal mode_ and then press `u`  
+
 
 ## **Users management and file accessibility👥(First lab)**
 
