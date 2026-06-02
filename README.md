@@ -71,7 +71,6 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
 > [!TIP]
 > For undoing first you need to go on _Normal mode_ and then press `u`  
 
-pish pish
 
 ## **Users management and file accessibility👥(First lab)**
 
