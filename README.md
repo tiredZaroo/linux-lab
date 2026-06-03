@@ -69,8 +69,17 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
   For saving file you can use `:w` and for saving and quit you can use `:wq`.
 
 > [!TIP]
-> For undoing first you need to go on _Normal mode_ and then press `u`  
+> For undoing first you need to go on _Normal mode_ and then press `u`
 
+### Normal mode
+
+- You can delete character in _Normal mode_ by pressing `x` and by pressing `dd` you can delete an entire line.
+- In this mode move around by `h`, `j`, `k` and `l` keys. `h` to the _left_, `l` to the _right_, `j` to the _down_ and `k` to the _up_.
+
+### Command mode
+
+- If you want to combine two file in one, first open first file and then go in _Command mode_ and write `:r [path of the second file]`
+- By typing `:! [linux command]` you can use linux commands and after execution press _Enter_ to come back to vim or type another command.
 
 ## **Users management and file accessibility👥(First lab)**
 
