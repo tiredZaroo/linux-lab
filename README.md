@@ -80,6 +80,8 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
 
 - If you want to combine two file in one, first open first file and then go in _Command mode_ and write `:r [path of the second file]`
 - By typing `:! [linux command]` you can use linux commands and after execution press _Enter_ to come back to vim or type another command.
+- To open second file on vim you can use `:e [file name]` and to switch between files you can use `:bn` (buffer next) or `:bp` (buffer pervious).
+- To open an empty buffer use `:enew` (edit new) to open an empty buffer. for saving it use `:w [file name]` and then you can navigate between open files including this file.
 
 ## **Users management and file accessibility👥(First lab)**
 
