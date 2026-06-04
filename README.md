@@ -73,15 +73,32 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
 
 ### Normal mode
 
-- You can delete character in _Normal mode_ by pressing `x` and by pressing `dd` you can delete an entire line.
+- You can delete character in _Normal mode_ by pressing `x` and by pressing `dd` you can delete an entire line and paste it with `p`.
 - In this mode move around by `h`, `j`, `k` and `l` keys. `h` to the _left_, `l` to the _right_, `j` to the _down_ and `k` to the _up_.
+- If you press `gg` you will go at the beginning of the file and if you press `shift + g` will go at the end of the file.
 
 ### Command mode
 
 - If you want to combine two file in one, first open first file and then go in _Command mode_ and write `:r [path of the second file]`
 - By typing `:! [linux command]` you can use linux commands and after execution press _Enter_ to come back to vim or type another command.
 - To open second file on vim you can use `:e [file name]` and to switch between files you can use `:bn` (buffer next) or `:bp` (buffer pervious).
+- If you don't want to switch to the new buffer you can use this `:badd [file name]` instead.
 - To open an empty buffer use `:enew` (edit new) to open an empty buffer. for saving it use `:w [file name]` and then you can navigate between open files including this file.
+- If you want to replace some word with something els you use this `:%s/[the word you want to change]/[the word you want to change to]/g`.
+- you can delete a buffer by typing `:bd`.
+- For having two buffer open on screen at the same time you can use `:split [second file name]` and if you want to navigate between files press `ctrl + ww`.
+- For a vertical split use `:vsplit [second file name]` instead.
+- To open vim split from start in terminal use `vim -o [first file name] [second file name]` for horizontal split and use `vim -O [first file name] [second file name]` for vertical split.
+- To get line number you can use `:set number` and for vanishing numbers `:set nonumber`.
+
+### Visual mode
+
+- By pressing `v` you can enter _Visual mode_.
+- In _Visual mode_ you can highlight the text you want to copy and then press `y` for yanking and then in _Normal mode_ if you press `p` it will paste the text.
+- In this mode you can _alphabetized_ texts by highlighting the text you want and then press `:` then type `sort ui`.
+
+> [!TIP]
+> In your home directory you can create a configuration file for vim with `vim .vimrc` and then write the rules and commands you want.
 
 ## **Users management and file accessibility👥(First lab)**
 
