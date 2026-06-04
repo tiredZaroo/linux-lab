@@ -178,3 +178,4 @@ Here we explained some of the system groups that users can be joined.
 
 > [!TIP]
 > With this command `sudo useradd -d /home/customdir [username]` you can specify a custom home directory for the user.
+
