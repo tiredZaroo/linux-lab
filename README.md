@@ -86,10 +86,3 @@ Here we explained some of the system groups that users can be joined.
 > [!TIP]
 > With this command `sudo useradd -d /home/customdir [username]` you can specify a custom home directory for the user.
 
-### **File ownership**
-
-Every file and directory in Linux has three kinds of owners:
-
-1. **User:** _User_ is the owner of the file. When you create a file, you become the owner of the file
-2. **Group:** Every user is part of a certain group(s). A _group_ consists of several users and this is one way to manage users in a multi-user environment.
-3. **Other:** _Other_ can be considered as a big group with all the users on the system. Basically, anyone with access to the system belongs to this group.
