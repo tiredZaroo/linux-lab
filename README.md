@@ -104,6 +104,10 @@ _Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will 
 
 ### **Shells information**
 
+Run the command `echo $SHELL` to know the Linux shell type that your system is using.  
+you can. You have to look into the file named /etc/shells to see all the installed Linux shells in your system which you can do using the `cat /etc/shells` command.  
+You can use the `chsh -s [path of shell]` command and change the default Linux shell.
+
 ---
 
 ### Command Path
