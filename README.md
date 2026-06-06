@@ -52,32 +52,34 @@ Understanding the directory hierarchy is crucial for efficient navigation and fi
 
 Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
 
-- **Nano**  
-  To use the _nano_ command in Linux, you simply type _nano_ followed by the filename (`nano [options] [file name]`). This command opens the specified file in the nano text editor. If the file doesn’t exist, nano will create it for you.  
-  Once you’ve opened a file, you can start editing right away and to save your changes, you press _Ctrl+O_, then Enter. This will write your changes to disk and for exit nano, you press _Ctrl+X_. For more shortcuts and information you can check [Essential Nano keyboard shortcuts](https://itsfoss.com/nano-editor-guide/).
+### Nano
+
+To use the _nano_ command in Linux, you simply type _nano_ followed by the filename (`nano [options] [file name]`). This command opens the specified file in the nano text editor. If the file doesn’t exist, nano will create it for you.  
+ Once you’ve opened a file, you can start editing right away and to save your changes, you press _Ctrl+O_, then Enter. This will write your changes to disk and for exit nano, you press _Ctrl+X_. For more shortcuts and information you can check [Essential Nano keyboard shortcuts](https://itsfoss.com/nano-editor-guide/).
 
 > [!tip]
 > To create backup of the current file before saving changes, you can use `nano -B [file name]` command.
 
-- **Vim**  
-  _Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will be painful at first. It will take time and i recommend to escape👍🏻and here is [Vim Cheat Sheet](https://vim.rtorr.com/).  
-  To see if it is installed you can use `command -v vim` command.  
-  To install vim you can use `sudo apt install vim-nox` command.  
-  When you start first are in _Normal mode_, you can not _edit_ file in this mode, you can't type anything.  
-  For typing and editing you need to enter _Insert mode_. If you press `i` or press _shift+a_ you can enter _Insert mode_. If you want to exit Normal mode you press Esc. and for leaving vim you type `:q` and if you want exit without saving changes you can type `:q!`.  
-  `:` give us _command mode_ and if you press Esc you come back to _Normal mode_.  
-  For saving file you can use `:w` and for saving and quit you can use `:wq`.
+### Vim
+
+_Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will be painful at first. It will take time and i recommend to escape👍🏻and here is [Vim Cheat Sheet](https://vim.rtorr.com/).  
+ To see if it is installed you can use `command -v vim` command.  
+ To install vim you can use `sudo apt install vim-nox` command.  
+ When you start first are in _Normal mode_, you can not _edit_ file in this mode, you can't type anything.  
+ For typing and editing you need to enter _Insert mode_. If you press `i` or press _shift+a_ you can enter _Insert mode_. If you want to exit Normal mode you press Esc. and for leaving vim you type `:q` and if you want exit without saving changes you can type `:q!`.  
+ `:` give us _command mode_ and if you press Esc you come back to _Normal mode_.  
+ For saving file you can use `:w` and for saving and quit you can use `:wq`.
 
 > [!TIP]
 > For undoing first you need to go on _Normal mode_ and then press `u`
 
-### Normal mode
+#### Normal mode
 
 - You can delete character in _Normal mode_ by pressing `x` and by pressing `dd` you can delete an entire line and paste it with `p`.
 - In this mode move around by `h`, `j`, `k` and `l` keys. `h` to the _left_, `l` to the _right_, `j` to the _down_ and `k` to the _up_.
 - If you press `gg` you will go at the beginning of the file and if you press `shift + g` will go at the end of the file.
 
-### Command mode
+#### Command mode
 
 - If you want to combine two file in one, first open first file and then go in _Command mode_ and write `:r [path of the second file]`
 - By typing `:! [linux command]` you can use linux commands and after execution press _Enter_ to come back to vim or type another command.
@@ -91,7 +93,7 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
 - To open vim split from start in terminal use `vim -o [first file name] [second file name]` for horizontal split and use `vim -O [first file name] [second file name]` for vertical split.
 - To get line number you can use `:set number` and for vanishing numbers `:set nonumber`.
 
-### Visual mode
+#### Visual mode
 
 - By pressing `v` you can enter _Visual mode_.
 - In _Visual mode_ you can highlight the text you want to copy and then press `y` for yanking and then in _Normal mode_ if you press `p` it will paste the text.
@@ -99,6 +101,27 @@ Here we are going to explain two _text editor_ in linux, _Vim_ and _Nano_.
 
 > [!TIP]
 > In your home directory you can create a configuration file for vim with `vim .vimrc` and then write the rules and commands you want.
+
+### **Shells information**
+
+---
+
+### Command Path
+
+The command path is a variable that is used by the shell to determine where to look for the executable files to run. with `echo $PATH` command you can see all the directories that are currently configured in your system’s $PATH.
+
+- #### Temporarily add Directory to PATH Variable
+
+  Adding a directory to the PATH variable will enable you to call on your program or script from anywhere in the system, without needing to specify the path to where you’ve stored it.  
+  To Temporarily add a directory to $PATH use `export PATH="[file path]: $PATH"`
+
+- #### Permanently add a directory to $PATH
+
+  To add a directory to $PATH permanently, we’ll need to edit the `.bashrc`file of the user you want to change. Use nano or your favorite text editor to open the file, stored in the home directory(`nano ~/.bashrc`) and at the end of this file, put your new directory that you wish to permanently add to $PATH(`export PATH="[file path]: $PATH"`).  
+  Save your changes and exit the file. Afterwards, execute the following command to make the changes take effect in your current session. Alternative, you can log out or reboot the system(`source ~/.bashrc`).
+
+- #### Remove directory from $PATH
+  You can remove a directory from PATH by editing the appropriate file and removing the undesirable directory. The directories for PATH can be configured in the `~/.bashrc` file (per user basis) or the `/etc/environment` (system wide variables).
 
 ## **Users management and file accessibility👥(First lab)**
 
@@ -178,4 +201,3 @@ Here we explained some of the system groups that users can be joined.
 
 > [!TIP]
 > With this command `sudo useradd -d /home/customdir [username]` you can specify a custom home directory for the user.
-
