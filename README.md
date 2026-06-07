@@ -104,11 +104,11 @@ _Vim_ is more advance than nano and a little hard to learn. Learning _vim_ will 
 
 ### **Shells information**
 
+---
+
 Run the command `echo $SHELL` to know the Linux shell type that your system is using.  
 you can. You have to look into the file named /etc/shells to see all the installed Linux shells in your system which you can do using the `cat /etc/shells` command.  
 You can use the `chsh -s [path of shell]` command and change the default Linux shell.
-
----
 
 ### Command Path
 
@@ -126,6 +126,25 @@ The command path is a variable that is used by the shell to determine where to l
 
 - #### Remove directory from $PATH
   You can remove a directory from PATH by editing the appropriate file and removing the undesirable directory. The directories for PATH can be configured in the `~/.bashrc` file (per user basis) or the `/etc/environment` (system wide variables).
+
+### Environment Variables
+
+Environment variables are dynamic values that can affect the behavior of running processes on a computer. They play a crucial role in system configuration and program execution. Environment variables are variables that are available to any child process of the shell. This means they can be accessed by scripts and programs run from that shell.  
+To view all current environment variables, use the `env` command.
+
+- #### create variable
+
+  you can create a _shell variable_ by simply assigning a value to a name for example `my_var="Hello, Linux"`.
+
+  > [!NOTE]
+  > When assigning variables in Bash (and Zsh, which we're using in this lab), there should be no spaces around the equals sign (=). my_var = "Hello, Linux" or my_var= "Hello, Linux" will cause an error.
+
+  To view the value of the variable, we use the `echo` command with a `$` before the variable name. The `$` tells the shell to substitute the value of the variable.  
+  We use the `export` command to create an _environment variable_, for example `export MY_ENV_VAR="This is an environment variable"`. The `export` command makes the variable available to child processes. This is the key difference between shell variables and environment variables.  
+  You cannot directly read another user’s or another shell’s variables because each process maintains its own environment. The `PATH` variable is one of the most important environment variables in Linux. It tells the system where to look for executable files. Let's modify it to include a new directory.
+
+- #### Unsetting Environment Variables
+  To unset (remove) variable, use the `unset` command. You can also use the `-v` option with `unset` to ensure you're unsetting a variable and not a shell function `unset -v MY_ENV_VA`
 
 ## **Users management and file accessibility👥(First lab)**
 
