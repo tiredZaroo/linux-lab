@@ -112,6 +112,8 @@ You can use the `chsh -s [path of shell]` command and change the default Linux s
 
 ### Command Path
 
+---
+
 The command path is a variable that is used by the shell to determine where to look for the executable files to run. with `echo $PATH` command you can see all the directories that are currently configured in your system’s $PATH.
 
 - #### Temporarily add Directory to PATH Variable
@@ -128,6 +130,8 @@ The command path is a variable that is used by the shell to determine where to l
   You can remove a directory from PATH by editing the appropriate file and removing the undesirable directory. The directories for PATH can be configured in the `~/.bashrc` file (per user basis) or the `/etc/environment` (system wide variables).
 
 ### Environment Variables
+
+---
 
 Environment variables are dynamic values that can affect the behavior of running processes on a computer. They play a crucial role in system configuration and program execution. Environment variables are variables that are available to any child process of the shell. This means they can be accessed by scripts and programs run from that shell.  
 To view all current environment variables, use the `env` command.
@@ -146,11 +150,19 @@ To view all current environment variables, use the `env` command.
 - #### Unsetting Environment Variables
   To unset (remove) variable, use the `unset` command. You can also use the `-v` option with `unset` to ensure you're unsetting a variable and not a shell function `unset -v MY_ENV_VA`
 
-## **Users management and file accessibility👥(First lab)**
-
-### Description
+### Redirect
 
 ---
+
+- There are three data streams. One input, _stdin (0)_ and two output data streams _stdout (1)_ and _stderr (2)_.
+- Keyboard is the default stdin device and the screen is the default output device.
+- Output redirection is used with `>` or `>>` (for append mode) `[command] > [file name]`.
+- Input redirection is used with `<` (`[command] < [file name]`).
+- The stderr can be redirected using `2>` or `2>>`.
+- The stderr and stdout can be combined using `2>&1`.
+- With pipe redirection, you send the standard output of a command to standard input of another command (`command 1 | command 2`). With pipe, both commands share the same memory buffer. The output of the first command is stored in the buffer and the same buffer is then used as input for the next command
+
+## **Users management and file accessibility👥(First lab)**
 
 In this lab we are going to manage users in three group (normal users, admins, developers) and each file should assign to a group and owner, and also should limited users to only what they need to access.
 <br><br>
