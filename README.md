@@ -162,6 +162,17 @@ To view all current environment variables, use the `env` command.
 - The stderr and stdout can be combined using `2>&1`.
 - With pipe redirection, you send the standard output of a command to standard input of another command (`command 1 | command 2`). With pipe, both commands share the same memory buffer. The output of the first command is stored in the buffer and the same buffer is then used as input for the next command
 
+### Sudo user
+
+---
+
+- To lock the root account you can use `sudo passwd -l root` command and for unlocking `sudo passwd -u root` command.
+- Use `sudo visudo` command to edit the sudoers file and use this `[username] ALL=(ALL) /path/to/command` line to give access to a user
+   - The ALL keyword grants the user the ability to execute the command with superuser privileges.
+   - The (ALL) keyword denotes that the user can execute the command from any host or IP address.
+   - Replace username with the actual username or the groupname for a group, and /path/to/command with the specific command or commands they should be able to execute with elevated privileges.
+
+
 ## **Users management and file accessibility👥(First lab)**
 
 In this lab we are going to manage users in three group (normal users, admins, developers) and each file should assign to a group and owner, and also should limited users to only what they need to access.
