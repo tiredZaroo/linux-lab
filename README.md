@@ -27,6 +27,10 @@ For start we need to know some basic commands to work with linux terminal freely
 | `mkdir [directory name]`                         | Creates a directory                                                                                     |
 | `rm [file name]`                                 | primary removes files                                                                                   |
 | `rmdir [option] [directory name]`                | deletes empty directories and if you want to directories that contains files in option section add `-r` |
+| `history`                                        | Shows all the commands that been used on system                                                         |
+| `which [name of command]`                        | Shows the PATH of the command                                                                           |
+| `info [name of command]`                         | Shows information of the command                                                                        |
+| `whatis [name of command]`                       | Gives a short summery of what command does                                                              |
 
 ### **Directory Hierarchy (file system tree🌲)**
 
@@ -168,10 +172,9 @@ To view all current environment variables, use the `env` command.
 
 - To lock the root account you can use `sudo passwd -l root` command and for unlocking `sudo passwd -u root` command.
 - Use `sudo visudo` command to edit the sudoers file and use this `[username] ALL=(ALL) /path/to/command` line to give access to a user
-   - The ALL keyword grants the user the ability to execute the command with superuser privileges.
-   - The (ALL) keyword denotes that the user can execute the command from any host or IP address.
-   - Replace username with the actual username or the groupname for a group, and /path/to/command with the specific command or commands they should be able to execute with elevated privileges.
-
+  - The ALL keyword grants the user the ability to execute the command with superuser privileges.
+  - The (ALL) keyword denotes that the user can execute the command from any host or IP address.
+  - Replace username with the actual username or the groupname for a group, and /path/to/command with the specific command or commands they should be able to execute with elevated privileges.
 
 ## **Users management and file accessibility👥(First lab)**
 
